@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 200px;
+            position: relative;
+            left: 10%;
+            top: 100px;
+       
+        }
+        .tou{
+            width: 1000px;
+            height: 80px;
+            
+       
+
+        }
+        .neironng{
+            width: 1000px;
+            height: 120px;
+            background-color: blanchedalmond;
+
+        }
+        .item{
+           background-color: green;
+           
+        }
+        li{
+            
+     
+            width: 180px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            display: inline-block;
+            padding: 0 20px;
+            list-style: none;
+
+
+        }
+        .content{
+            display: none;
+        }
+       
+        .null{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="tou">
+            <ul>
+                <li class="item">牙膏</li>
+                <li>牙刷</li>
+                <li >洗面奶</li>
+                <li >洗衣液</li>
+            </ul>
+
+        </div>
+        <div class="neirong">
+            <div class="content" style="display: block;">222222222</div>
+            <div class="content">2</div>
+            <div class="content">3</div>
+            <div class="content">4</div>
+        </div>
+    </div>
+    <script>
+        var lis = document.querySelectorAll('li');
+        var cons = document.querySelectorAll('.content');
+        for(var i=0;i<lis.length;i++){
+            lis[i].setAttribute('num',i);
+            lis[i].onclick=function(){
+                for(var i=0;i<lis.length;i++){
+                    lis[i].className='null';
+                }
+                this.className='item';
+               
+                for(var i=0;i<cons.length;i++){
+                    for(var i=0;i<cons.length;i++){
+                        cons[i].style.display='none';
+                    }
+                    var num = this.getAttribute('num');
+                    cons[num].style.display='block';
+
+                }
+
+            }
+        }
+
+    </script>
+</body>
+</html>

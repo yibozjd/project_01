@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>冰红茶</li>
+        <li>冰红茶2</li>
+        <li>冰红茶3</li>
+        <li>冰红茶4</li>
+        <li>冰红茶5</li>
+    </ul>
+    <ol>
+        <li>绿茶</li>
+        <li>绿茶</li>
+        <li>绿茶</li>
+    </ol>
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[1]);
+        for(i=0;i<lis.length;i++){
+            console.log(lis[i])
+        }
+        var ol = document.getElementsByTagName('ol');
+        console.log(ol[0].getElementsByTagName('li'))
+    </script>
+</body>
+</html>

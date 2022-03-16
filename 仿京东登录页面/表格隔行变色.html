@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead{
+            background-color: yellow;
+            width: 100px;
+        }
+        table,table tr th, table tr td { border:1px solid #0094ff; }
+        table { width: 500px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;}   
+        .hover{
+            background-color: red;
+        }
+        .likai{
+            background-color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1222</td>
+                <td>加油加油3</td>
+                <td>加油加油5</td>
+                <td>加油加油</td>
+                <td>加油加油</td>
+            </tr>
+            <tr>
+                <td>1222</td>
+                <td>加油加油7</td>
+                <td>加油加油7</td>
+                <td>加油加油</td>
+                <td>加油加油</td>
+            </tr>
+            <tr>
+                <td>1222</td>
+                <td>加油加油9</td>
+                <td>加油加油3</td>
+                <td>加油加油</td>
+                <td>加油加油</td>
+            </tr> 
+            
+        </tbody>
+    </table>
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        for(var i=0;i<trs.length;i++){
+            trs[i].onmouseover=function(){
+            this.className='hover';
+            }
+            trs[i].onmouseout=function(){
+                this.className='likai';
+            }
+        }
+
+    </script>
+</body>
+</html>

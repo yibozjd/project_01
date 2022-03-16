@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lo{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="lo"></div>
+    <script>
+        var lo = document.querySelector('.lo');
+        lo.addEventListener('mousedown',function(e){
+            var x = e.pageX-lo.offsetLeft;
+            var y = e.pageY-lo.offsetTop;
+            console.log(lo.offsetLeft);
+           
+            
+            document.addEventListener('mousemove',mo);
+            function mo(e){
+                lo.style.left=e.pageX-x +'px';
+                lo.style.top=e.pageY-y+'px';
+            }
+            document.addEventListener('mouseup',function(){
+                document.removeEventListener('mousemove',mo);
+            });
+
+        })
+    </script>
+</body>
+</html>

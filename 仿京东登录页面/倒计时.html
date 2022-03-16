@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            
+            width: 80px;
+            height: 80px;
+            float: left;
+            margin: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <script>
+        var hour = document.querySelector('.box1');
+        var minner = document.querySelector('.box2');
+        var second = document.querySelector('.box3');
+        var inputdate = +new Date('2022-3-3 19:30:30');
+        function gettime(time){
+            var date = +new Date();
+            
+            var date2 = (inputdate - date)/1000;
+            
+            var h= parseInt(date2/60/60%24);
+            hour.innerHTML=h;
+            var m=parseInt(date2/60%60);
+            minner.innerHTML=m;
+
+            var s = parseInt(date2%60);
+            second.innerHTML=s;
+            
+
+
+
+        }
+        setInterval(gettime,1000);
+    </script>
+</body>
+</html>

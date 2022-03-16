@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ss"> <input type="checkbox" class="che">
+</body>
+<script>
+    var ss = document.querySelector('#ss');
+    var che = document.querySelector('.che');
+    if(localStorage.getItem('username')){
+        ss.value=localStorage.getItem('username');
+        che.checked=true;
+    }
+    che.addEventListener('change',function(){
+        if(this.checked){
+            localStorage.setItem('username',ss.value);
+        }else{
+            localStorage.removeItem('username');
+        }
+
+    })
+</script>
+</html>

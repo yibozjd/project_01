@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       li{
+           list-style: none;
+       }
+       .nav li a{
+           float: left;
+           margin-right: 50px;
+           position: relative;
+           left: 170px;
+
+       }
+       .nav li ul{
+           position: relative;
+           top: 20px;
+           left: 50px;
+           float: left;
+           display: none;
+       }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a>首页</a>
+            <ul>
+                <li>aaa</li>
+                <li>aaa</li>
+                <li>aaa</li>
+            </ul>
+            </li>
+            <li>
+            <a>牙膏</a>
+            <ul>
+                <li>aaa</li>
+                <li>aaa</li>
+                <li>aaa</li>
+            </ul></li>
+            <li>
+            <a>怡宝</a>
+            <ul>
+                <li>ccc</li>
+                <li>ccc</li>
+                <li>ccc</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        var nav = document.querySelector('.nav');
+        var lis = nav.children;
+        for(var i = 0;i<lis.length;i++){
+            lis[i].onmouseover=function(){
+                this.children[1].style.display='block';
+            }
+            lis[i].onmouseout=function(){
+                this.children[1].style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>

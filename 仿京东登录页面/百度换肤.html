@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url(../img/s.jpg) no-repeat ;
+            background-size:100% 100%;
+            background-attachment:fixed;       
+              /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定     */
+        }
+        .baidu{
+            width: 500px;
+            position: relative;
+            left: 40%;
+        }
+        li{
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="baidu">
+        <li><img src="../img/m.jpg" width="100px" height="100px"></li>
+        <li><img src='../img/s.jpg' width="100px" height="100px"></li>
+        <li><img src="../img/w.jpg" width="100px" height="100px" ></li>
+    </ul>
+    <script>
+        var imgs =  document.querySelector('.baidu').querySelectorAll('img');
+        for(var i =0;i<imgs.length;i++){
+            imgs[i].onclick = function(){
+                console.log(this.src);
+                document.body.style.backgroundImage='url('+this.src+')';
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gettime(time){
+            var date = +new Date();
+            var inputdate = +new Date(time);
+            var date2 = (inputdate - date)/1000;
+            var d= parseInt(date2/60/60/24);
+            var h= parseInt(date2/60/60%24);
+            var m=parseInt(date2/60%60);
+            var s = parseInt(date2%60);
+            return d+'天'+h+'小时'+m+'分'+s+'秒';
+
+
+
+        }
+        console.log(gettime('2022-1-26 19:30:30'));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
